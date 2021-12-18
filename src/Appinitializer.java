@@ -1,5 +1,3 @@
-package lk.ijse.sipsewana;
-
 import javafx.application.Application;
 import javafx.stage.Stage;
 

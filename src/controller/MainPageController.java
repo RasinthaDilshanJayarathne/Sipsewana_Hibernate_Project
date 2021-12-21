@@ -1,7 +1,5 @@
 package controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,12 +9,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class MainPageController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private TextField txtStudentId;
@@ -73,28 +65,31 @@ public class MainPageController {
     private Button btnPdelete;
 
     @FXML
-    private TableView tblDetails;
+    private TableView<?> tblDetails;
 
     @FXML
-    private TableColumn colStudentId;
+    private TableColumn<?, ?> colStudentId;
 
     @FXML
-    private TableColumn colFirstName;
+    private TableColumn<?, ?> colFirstName;
 
     @FXML
-    private TableColumn colLastName;
+    private TableColumn<?, ?> colLastName;
 
     @FXML
-    private TableColumn colProgramId;
+    private TableColumn<?, ?> colProgramId;
 
     @FXML
-    private TableColumn colProgram;
+    private TableColumn<?, ?> colProgram;
 
     @FXML
-    private TableColumn colFee;
+    private TableColumn<?, ?> colFee;
 
     @FXML
-    private TableColumn colDuration;
+    private TableColumn<?, ?> colDuration;
+
+    @FXML
+    private TextField txtSearch;
 
     @FXML
     void programAddOnAction(ActionEvent event) {

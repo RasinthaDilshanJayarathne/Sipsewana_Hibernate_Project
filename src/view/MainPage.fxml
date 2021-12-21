@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="936.0" prefWidth="1101.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPageController">
    <children>
       <AnchorPane layoutX="18.0" layoutY="8.0" prefHeight="504.0" prefWidth="525.0" style="-fx-background-color: #ababab;">
@@ -262,7 +261,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <TableView fx:id="tblDetails" layoutX="18.0" layoutY="552.0" prefHeight="377.0" prefWidth="1063.0">
+      <TableView fx:id="tblDetails" layoutX="18.0" layoutY="590.0" prefHeight="339.0" prefWidth="1063.0">
         <columns>
           <TableColumn fx:id="colStudentId" prefWidth="133.00003051757812" text="Student Id" />
           <TableColumn fx:id="colFirstName" prefWidth="151.0" text="First Name" />
@@ -274,5 +273,10 @@
         </columns>
       </TableView>
       <Separator layoutX="10.0" layoutY="521.0" prefHeight="22.0" prefWidth="1081.0" />
+      <TextField fx:id="txtSearch" layoutX="18.0" layoutY="546.0" prefHeight="31.0" prefWidth="1063.0" promptText="Search Student">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

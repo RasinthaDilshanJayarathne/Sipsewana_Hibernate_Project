@@ -1,0 +1,64 @@
+.textPane{
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+}
+.textField{
+    -fx-prompt-text-fill: #969696;
+}
+
+.textField-view{
+    -fx-prompt-text-fill: black;
+}
+.search-btn{
+    -fx-background-color:  #3498DB;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+.search-btn:hover{
+    -fx-background-color: black;
+}
+.add-btn{
+    -fx-background-color: #269c19;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+.add-btn:hover{
+    -fx-background-color: black;
+}
+.update-btn{
+    -fx-background-color:  #F1C40F;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+.update-btn:hover{
+    -fx-background-color: black;
+}
+.delete-btn{
+    -fx-background-color: #E74C3C;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+.delete-btn:hover{
+    -fx-background-color: black;
+}
+
+.textField-view{
+    -fx-prompt-text-fill: black;
+}
+
+.textLabel {
+    -fx-prompt-text-fill: #969696;
+}

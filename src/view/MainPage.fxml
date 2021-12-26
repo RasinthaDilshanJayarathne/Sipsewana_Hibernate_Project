@@ -273,7 +273,7 @@
         </columns>
       </TableView>
       <Separator layoutX="10.0" layoutY="521.0" prefHeight="22.0" prefWidth="1081.0" />
-      <TextField fx:id="txtSearch" layoutX="18.0" layoutY="546.0" prefHeight="31.0" prefWidth="1063.0" promptText="Search Student">
+      <TextField fx:id="txtSearch" layoutX="18.0" layoutY="546.0" prefHeight="31.0" prefWidth="1063.0" promptText="Search">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

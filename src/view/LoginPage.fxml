@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="595.0" prefWidth="1085.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageController" />
+
+<AnchorPane fx:id="root" prefHeight="595.0" prefWidth="1017.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageController">
+   <children>
+      <Label alignment="CENTER" layoutY="23.0" prefHeight="52.0" prefWidth="537.0" text=" Sipsewana Institute" textFill="#0a39f7">
+         <font>
+            <Font name="Arial Bold" size="45.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="78.0" prefHeight="25.0" prefWidth="537.0" text="Education Center">
+         <font>
+            <Font name="Bodoni MT Black" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="351.0" fitWidth="537.0" layoutX="-7.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="538.0" layoutY="3.0" prefHeight="589.0" prefWidth="475.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 2; -fx-border-color: black;">
+         <children>
+            <FontAwesomeIconView glyphName="USER" layoutX="17.0" layoutY="301.0" size="40" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="17.0" layoutY="382.0" size="40" />
+            <TextField fx:id="txtUserName" layoutX="113.0" layoutY="267.0" onAction="#goToPassword" prefHeight="40.0" prefWidth="321.0" promptText="User Name" />
+            <PasswordField fx:id="txtPassword" layoutX="113.0" layoutY="346.0" prefHeight="40.0" prefWidth="321.0" promptText="Password" />
+            <Button layoutX="281.0" layoutY="460.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: blue;" text="Log In" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="132.0" layoutY="460.0" mnemonicParsing="false" onAction="#goToCanclePage" prefHeight="31.0" prefWidth="134.0" text="Cancle">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="7.0" layoutY="27.0" prefHeight="40.0" prefWidth="463.0" text="Welcome !">
+               <font>
+                  <Font name="Garamond Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblError" layoutX="114.0" layoutY="398.0" prefHeight="25.0" prefWidth="321.0" textFill="#f82121">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="8.0" layoutY="534.0" prefHeight="26.0" prefWidth="463.0" style="-fx-background-color: white;" text="Copyright 2021 Supermarcket," />
+            <Label alignment="CENTER" layoutX="9.0" layoutY="554.0" prefHeight="26.0" prefWidth="456.0" style="-fx-background-color: white;" text="All Right Reserved Design By Rasintha Dilshan" />
+            <ImageView fitHeight="170.0" fitWidth="175.0" layoutX="155.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Super_Market(Hibernate)/src/assets/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

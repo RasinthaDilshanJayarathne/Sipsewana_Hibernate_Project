@@ -12,12 +12,14 @@ public class LoginPageController {
     public PasswordField txtPassword;
     public Label lblError;
 
-    public void goToPassword(ActionEvent actionEvent) {
-    }
-
     public void goToLoginPage(ActionEvent actionEvent) {
     }
 
+    public void goToPassword(ActionEvent actionEvent) {
+        txtPassword.requestFocus();
+    }
+
     public void goToCanclePage(ActionEvent actionEvent) {
+        System.exit(0);
     }
 }

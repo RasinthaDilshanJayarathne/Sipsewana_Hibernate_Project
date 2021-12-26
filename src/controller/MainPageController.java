@@ -1,7 +1,6 @@
 package controller;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
@@ -10,125 +9,63 @@ import javafx.scene.control.TextField;
 
 public class MainPageController {
 
-    @FXML
-    private TextField txtStudentId;
+    public TextField txtNic;
+    public TableColumn colDate;
+    public TextField txtStudentId;
+    public TextField txtFirstName;
+    public TextField txtAddress;
+    public TextField txtContact;
+    public ComboBox<String> cmbProgram;
+    public Button btnClear;
+    public Button btnAad;
+    public Button btnUpdate;
+    public Button btnDelete;
+    public TextField txtProgramId;
+    public TextField txtDuration;
+    public TextField txtProgram;
+    public TextField txtFee;
+    public Button btnProgramClear;
+    public Button btnProgrammedAdd;
+    public Button btnProgramDelete;
+    public Button btnProgramUpdate;
+    public TableView tblDetails;
+    public TableColumn colStudentId;
+    public TableColumn colFirstName;
+    public TableColumn colProgramId;
+    public TableColumn colProgram;
+    public TableColumn colFee;
+    public TableColumn colDuration;
+    public TextField txtSearch;
 
-    @FXML
-    private TextField txtLastName;
-
-    @FXML
-    private TextField txtFirstName;
-
-    @FXML
-    private TextField txtAddress;
-
-    @FXML
-    private TextField txtContact;
-
-    @FXML
-    private ComboBox<?> cmbProgram;
-
-    @FXML
-    private Button btnSclear;
-
-    @FXML
-    private Button btnSadd;
-
-    @FXML
-    private Button btnSupdate;
-
-    @FXML
-    private Button btnSdelete;
-
-    @FXML
-    private TextField txtProgramId;
-
-    @FXML
-    private TextField txtDuration;
-
-    @FXML
-    private TextField txtProgram;
-
-    @FXML
-    private TextField txtFee;
-
-    @FXML
-    private Button btnPclear;
-
-    @FXML
-    private Button btnPadd;
-
-    @FXML
-    private Button btnPupdate;
-
-    @FXML
-    private Button btnPdelete;
-
-    @FXML
-    private TableView<?> tblDetails;
-
-    @FXML
-    private TableColumn<?, ?> colStudentId;
-
-    @FXML
-    private TableColumn<?, ?> colFirstName;
-
-    @FXML
-    private TableColumn<?, ?> colLastName;
-
-    @FXML
-    private TableColumn<?, ?> colProgramId;
-
-    @FXML
-    private TableColumn<?, ?> colProgram;
-
-    @FXML
-    private TableColumn<?, ?> colFee;
-
-    @FXML
-    private TableColumn<?, ?> colDuration;
-
-    @FXML
-    private TextField txtSearch;
-
-    @FXML
-    void programAddOnAction(ActionEvent event) {
+    public void programDeleteOnAction(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    void programClearOnAction(ActionEvent event) {
+    public void programUpdateOnAction(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    void programDeleteOnAction(ActionEvent event) {
+    public void programAddOnAction(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    void programUpdateOnAction(ActionEvent event) {
+    public void programClearOnAction(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    void studentAddOnAction(ActionEvent event) {
+    public void studentDeleteOnAction(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    void studentClearOnAction(ActionEvent event) {
+    public void studentUpdateOnAction(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    void studentDeleteOnAction(ActionEvent event) {
+    public void studentAddOnAction(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    void studentUpdateOnAction(ActionEvent event) {
+    public void studentClearOnAction(ActionEvent actionEvent) {
 
     }
-
 }

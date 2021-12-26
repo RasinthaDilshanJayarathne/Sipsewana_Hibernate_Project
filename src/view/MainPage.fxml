@@ -62,7 +62,7 @@
             </AnchorPane>
             <AnchorPane layoutX="14.0" layoutY="157.0" prefHeight="47.0" prefWidth="169.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="10.0" layoutY="6.0" text="Last Name">
+                  <Label layoutX="10.0" layoutY="6.0" text="Nic">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
@@ -80,7 +80,7 @@
             </AnchorPane>
             <AnchorPane layoutX="203.0" layoutY="157.0" prefHeight="47.0" prefWidth="303.0" style="-fx-background-color: white;">
                <children>
-                  <TextField fx:id="txtLastName" layoutX="14.0" layoutY="9.0" prefHeight="31.0" prefWidth="275.0" promptText="xxxxxx">
+                  <TextField fx:id="txtNic" layoutX="14.0" layoutY="9.0" prefHeight="31.0" prefWidth="275.0" promptText="xxxxxx">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -119,7 +119,7 @@
                   <ComboBox fx:id="cmbProgram" layoutX="12.0" layoutY="8.0" prefHeight="31.0" prefWidth="275.0" />
                </children>
             </AnchorPane>
-            <Button fx:id="btnSclear" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentClearOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Clear">
+            <Button fx:id="btnClear" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentClearOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Clear">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -127,7 +127,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnSadd" layoutX="142.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentAddOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Add">
+            <Button fx:id="btnAad" layoutX="142.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentAddOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Add">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -135,7 +135,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnSupdate" layoutX="271.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentUpdateOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Update">
+            <Button fx:id="btnUpdate" layoutX="271.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentUpdateOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Update">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -143,7 +143,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnSdelete" layoutX="403.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentDeleteOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Delete">
+            <Button fx:id="btnDelete" layoutX="403.0" layoutY="429.0" mnemonicParsing="false" onAction="#studentDeleteOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Delete">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -227,7 +227,7 @@
                   </TextField>
                </children>
             </AnchorPane>
-            <Button fx:id="btnPclear" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#programClearOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Clear">
+            <Button fx:id="btnProgramClear" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#programClearOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Clear">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -235,7 +235,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnPadd" layoutX="142.0" layoutY="429.0" mnemonicParsing="false" onAction="#programAddOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Add">
+            <Button fx:id="btnProgrammedAdd" layoutX="142.0" layoutY="429.0" mnemonicParsing="false" onAction="#programAddOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Add">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -243,7 +243,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnPupdate" layoutX="271.0" layoutY="429.0" mnemonicParsing="false" onAction="#programUpdateOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Update">
+            <Button fx:id="btnProgramUpdate" layoutX="271.0" layoutY="429.0" mnemonicParsing="false" onAction="#programUpdateOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Update">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -251,7 +251,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnPdelete" layoutX="403.0" layoutY="429.0" mnemonicParsing="false" onAction="#programDeleteOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Delete">
+            <Button fx:id="btnProgramDelete" layoutX="403.0" layoutY="429.0" mnemonicParsing="false" onAction="#programDeleteOnAction" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: white;" text="Delete">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -265,7 +265,7 @@
         <columns>
           <TableColumn fx:id="colStudentId" prefWidth="133.00003051757812" text="Student Id" />
           <TableColumn fx:id="colFirstName" prefWidth="151.0" text="First Name" />
-            <TableColumn fx:id="colLastName" prefWidth="164.0" text="Last Name" />
+            <TableColumn fx:id="colDate" prefWidth="164.0" text="Date" />
             <TableColumn fx:id="colProgramId" prefWidth="151.0" text="Program ID" />
             <TableColumn fx:id="colProgram" prefWidth="213.0" text="Program" />
             <TableColumn fx:id="colFee" prefWidth="127.0" text="Fee (LKR)" />

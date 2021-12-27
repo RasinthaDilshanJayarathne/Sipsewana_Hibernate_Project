@@ -17,8 +17,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="760.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentPageController">
+<AnchorPane fx:id="context" prefHeight="760.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentPageController">
    <children>
       <JFXTextField fx:id="txtName" labelFloat="true" layoutX="26.0" layoutY="167.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Name :">
          <font>
@@ -40,7 +39,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <TableView fx:id="tblStudent" layoutX="7.0" layoutY="413.0" prefHeight="333.0" prefWidth="737.0" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_item.css">
+      <TableView fx:id="tblStudent" layoutX="12.0" layoutY="413.0" prefHeight="333.0" prefWidth="737.0" stylesheets="@../styles/manage_student.css">
          <columns>
             <TableColumn fx:id="colSid" prefWidth="115.0" text="Student ID" />
             <TableColumn fx:id="colName" prefWidth="148.0" text="Name" />

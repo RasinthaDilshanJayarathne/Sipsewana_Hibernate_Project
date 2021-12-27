@@ -1,35 +1,30 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class StudentPageController {
-    public JFXTextField txtName;
-    public JFXTextField txtNic;
-    public JFXTextField txtAddress;
-    public JFXTextField txtContact;
+public class ProgramPageController {
+    public AnchorPane context;
+    public JFXTextField txtPid;
+    public JFXTextField textName;
+    public JFXTextField txtDuration;
+    public JFXTextField txtFee;
     public TableView tblStudent;
-    public TableColumn colSid;
-    public TableColumn colName;
-    public TableColumn colNic;
-    public TableColumn colAddress;
-    public TableColumn colContact;
+    public TableColumn colPid;
+    public TableColumn colProgram;
+    public TableColumn colDuration;
+    public TableColumn colFee;
     public JFXButton btnSave;
     public JFXButton btnUpdate;
     public JFXButton btnDelete;
-    public Label lblSid;
-    public Label lblRid;
-    public JFXComboBox cmbProgram;
     public TextField txtSearch;
-    public AnchorPane context;
 
     public void navigateToHome(MouseEvent event) {
     }
@@ -41,5 +36,8 @@ public class StudentPageController {
     }
 
     public void btnSave_OnAction(ActionEvent actionEvent) {
+    }
+
+    public void textFields_Key_Released(KeyEvent keyEvent) {
     }
 }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="context" prefHeight="760.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgramPageController">
+   <children>
+      <JFXTextField fx:id="txtPid" labelFloat="true" layoutX="26.0" layoutY="140.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Program ID :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textName" labelFloat="true" layoutX="396.0" layoutY="140.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="Program :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDuration" labelFloat="true" layoutX="26.0" layoutY="214.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="337.0" promptText="Duration :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="396.0" layoutY="213.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="Fee (LKR) :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblStudent" layoutX="12.0" layoutY="413.0" prefHeight="334.0" prefWidth="737.0" stylesheets="@../styles/manage_student.css">
+         <columns>
+            <TableColumn fx:id="colPid" prefWidth="158.0" text="Program ID" />
+            <TableColumn fx:id="colProgram" prefWidth="197.0" text="Program" />
+            <TableColumn fx:id="colDuration" prefWidth="192.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="184.0" text="Fee (LKR)" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="209.0" layoutY="286.0" onAction="#btnSave_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Save">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnUpdate" fx:id="btnUpdate" layoutX="329.0" layoutY="286.0" onAction="#btnUpdate_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Update">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="447.0" layoutY="286.0" onAction="#btnDelete_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="760.0">
+         <fill>
+            <LinearGradient endX="0.04807692307692308" endY="0.7115384615384616">
+               <stops>
+                  <Stop color="#1598d6" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="24.0" layoutY="18.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/home.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="131.0" layoutY="25.0" text="Adding Program Form">
+         <font>
+            <Font name="Garamond Bold" size="35.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="14.0" layoutY="375.0" prefHeight="31.0" prefWidth="349.0" promptText="Search Program">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="14.0" layoutY="334.0" prefHeight="31.0" prefWidth="737.0" />
+   </children>
+</AnchorPane>

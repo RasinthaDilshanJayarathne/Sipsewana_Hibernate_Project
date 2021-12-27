@@ -1,6 +1,11 @@
 package entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Program {
+    @Id
     private String pId;
     private String pName;
     private String duration;

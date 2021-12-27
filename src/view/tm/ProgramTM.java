@@ -1,6 +1,6 @@
 package view.tm;
 
-public class ProgramTM {
+public class ProgramTM implements Comparable<ProgramTM>{
     private String pId;
     private String pName;
     private String duration;
@@ -56,5 +56,10 @@ public class ProgramTM {
                 ", duration='" + duration + '\'' +
                 ", fee=" + fee +
                 '}';
+    }
+
+    @Override
+    public int compareTo(ProgramTM o) {
+        return pId.compareTo(o.getpId());
     }
 }

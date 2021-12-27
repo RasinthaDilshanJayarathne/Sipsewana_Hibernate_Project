@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="760.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentPageController">
+   <children>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="26.0" layoutY="167.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNic" labelFloat="true" layoutX="396.0" layoutY="167.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="NIC :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="26.0" layoutY="230.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="337.0" promptText="Address :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="396.0" layoutY="229.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="Contact :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblStudent" layoutX="7.0" layoutY="413.0" prefHeight="333.0" prefWidth="737.0" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_item.css">
+         <columns>
+            <TableColumn fx:id="colSid" prefWidth="115.0" text="Student ID" />
+            <TableColumn fx:id="colName" prefWidth="148.0" text="Name" />
+            <TableColumn fx:id="colNic" prefWidth="160.0" text="NIC" />
+            <TableColumn fx:id="colAddress" prefWidth="168.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="138.0" text="Contact" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="400.0" layoutY="293.0" onAction="#btnSave_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Save">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnUpdate" fx:id="btnUpdate" layoutX="520.0" layoutY="293.0" onAction="#btnUpdate_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Update">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="638.0" layoutY="293.0" onAction="#btnDelete_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="760.0">
+         <fill>
+            <LinearGradient endX="0.04807692307692308" endY="0.7115384615384616">
+               <stops>
+                  <Stop color="#1598d6" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="24.0" layoutY="17.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/home.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="131.0" layoutY="24.0" text="Student Register Form">
+         <font>
+            <Font name="Garamond Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="109.0" text="Stuent ID :">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="109.0" text="Registation No :">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSid" disable="true" layoutX="151.0" layoutY="109.0" prefHeight="34.0" prefWidth="152.0" text="S-0001">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRid" disable="true" layoutX="581.0" layoutY="109.0" prefHeight="34.0" prefWidth="152.0" text="R-0001">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbProgram" layoutX="26.0" layoutY="297.0" prefHeight="31.0" prefWidth="337.0" promptText="Select Your Course" />
+      <TextField fx:id="txtSearch" layoutX="14.0" layoutY="374.0" prefHeight="31.0" prefWidth="349.0" promptText="Search Student">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="14.0" layoutY="340.0" prefHeight="31.0" prefWidth="737.0" />
+   </children>
+</AnchorPane>

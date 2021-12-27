@@ -1,6 +1,11 @@
 package entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Student {
+    @Id
     private String sId;
     private String sName;
     private String nic;

@@ -1,4 +1,6 @@
 package dao.custom;
 
-public interface ProgramDAO {
+import entity.Program;
+
+public interface ProgramDAO extends CrudDAO<Program,String> {
 }

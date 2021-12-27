@@ -37,6 +37,10 @@ public class MainPageController {
     public TableColumn colDuration;
     public TextField txtSearch;
 
+    public void initialize(){
+
+    }
+
     public void programDeleteOnAction(ActionEvent actionEvent) {
 
     }

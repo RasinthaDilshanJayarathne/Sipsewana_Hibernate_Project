@@ -1,6 +1,8 @@
 package view.tm;
 
-public class StudentTM {
+import entity.Student;
+
+public class StudentTM implements Comparable<StudentTM>{
     private String sId;
     private String sName;
     private String nic;
@@ -78,5 +80,10 @@ public class StudentTM {
                 ", contact='" + contact + '\'' +
                 ", program='" + program + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(StudentTM o) {
+        return sId.compareTo(o.getsId());
     }
 }

@@ -39,7 +39,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <TableView fx:id="tblStudent" layoutX="12.0" layoutY="413.0" prefHeight="333.0" prefWidth="737.0" stylesheets="@../styles/manage_student.css">
+      <TableView fx:id="tblStudent" layoutX="12.0" layoutY="413.0" prefHeight="333.0" prefWidth="737.0" stylesheets="@../styles/style.css">
          <columns>
             <TableColumn fx:id="colSid" prefWidth="115.0" text="Student ID" />
             <TableColumn fx:id="colName" prefWidth="148.0" text="Name" />
@@ -52,17 +52,17 @@
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <JFXButton id="btnSave" fx:id="btnSave" layoutX="400.0" layoutY="293.0" onAction="#btnSave_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Save">
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="400.0" layoutY="293.0" onAction="#btnSave_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Save">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton id="btnUpdate" fx:id="btnUpdate" layoutX="520.0" layoutY="293.0" onAction="#btnUpdate_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Update">
+      <JFXButton id="btnUpdate" fx:id="btnUpdate" layoutX="520.0" layoutY="293.0" onAction="#btnUpdate_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Update">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="638.0" layoutY="293.0" onAction="#btnDelete_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../../../Super_Market(Hibernate)/src/styles/manage_customer.css" text="Delete">
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="638.0" layoutY="293.0" onAction="#btnDelete_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Delete">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

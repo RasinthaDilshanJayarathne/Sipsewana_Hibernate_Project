@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="590.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+   <children>
+      <ImageView fx:id="imgDetail" fitHeight="159.0" fitWidth="127.0" layoutX="724.0" layoutY="236.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/viewDetail.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgProgram" fitHeight="159.0" fitWidth="127.0" layoutX="448.0" layoutY="236.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/items.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="-1.0" layoutY="432.0" prefHeight="32.0" prefWidth="1012.0" text="Welcome" textAlignment="CENTER" textFill="#0a39f7">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="542.0" prefHeight="16.0" prefWidth="1012.0" text="Copyright ©️ 2021 Supermarcket. All Right Reserved Design By Rasintha Dilshan" />
+      <FontAwesomeIconView fill="#ee1d1d" glyphName="POWER_OFF" layoutX="14.0" layoutY="41.0" onMouseClicked="#navigateToHome" size="40" />
+      <Label fx:id="lblDescription" alignment="CENTER" layoutY="484.0" prefHeight="21.0" prefWidth="1012.0" text="Please select one of above main operations to proceed" />
+      <Label alignment="CENTER" layoutX="1.0" layoutY="50.0" prefHeight="52.0" prefWidth="1022.0" text="Admin Dashboard" textFill="#0a39f7">
+         <font>
+            <Font name="Arial Bold" size="45.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="108.0" prefHeight="21.0" prefWidth="1022.0" text="Education Center">
+         <font>
+            <Font name="Bodoni MT Black" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="58.0" layoutY="184.0" prefHeight="2.0" prefWidth="909.0" />
+      <ImageView fx:id="imgStudent" fitHeight="159.0" fitWidth="127.0" layoutX="192.0" layoutY="236.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Student.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

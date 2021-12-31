@@ -21,14 +21,14 @@ public class BOFactory {
                 return new StudentBOImpl();
             case PROGRAM:
                 return new StudentBOImpl();
-            case REGISTER_DETAIL:
-                return new RegisterDetailBOImpl();
+            case REGISTER:
+                return new RegisterBOImpl();
             default:
                 return null;
         }
     }
 
     public enum BoTypes {
-        STUDENT, PROGRAM, REGISTER_DETAIL
+        STUDENT, PROGRAM, REGISTER
     }
 }

@@ -1,16 +1,16 @@
-package dto;
+package entity;
 
 import java.time.LocalDate;
 
-public class RegisterDetailDTO {
+public class Register {
     private String sId;
     private String pId;
     private LocalDate date;
 
-    public RegisterDetailDTO() {
+    public Register() {
     }
 
-    public RegisterDetailDTO(String sId, String pId, LocalDate date) {
+    public Register(String sId, String pId, LocalDate date) {
         this.setsId(sId);
         this.setpId(pId);
         this.setDate(date);

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -13,10 +16,14 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="context" prefHeight="760.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistationDetailController">
    <children>
-      <TableView fx:id="tblDetails" layoutX="12.0" layoutY="152.0" prefHeight="595.0" prefWidth="737.0" stylesheets="@../styles/style.css">
+      <ImageView fitHeight="682.0" fitWidth="692.0" layoutX="31.0" layoutY="73.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/online-course.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblDetails" layoutX="12.0" layoutY="382.0" prefHeight="365.0" prefWidth="737.0" stylesheets="@../styles/style.css">
          <columns>
             <TableColumn fx:id="colRid" prefWidth="124.0" text="Register ID" />
             <TableColumn fx:id="colPid" prefWidth="152.0" text="Program ID" />
@@ -49,10 +56,51 @@
             <Font name="Garamond Bold" size="35.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearch" layoutX="32.0" layoutY="101.0" prefHeight="31.0" prefWidth="349.0" promptText="Search ">
+      <TextField fx:id="txtSearch" layoutX="31.0" layoutY="339.0" prefHeight="31.0" prefWidth="349.0" promptText="Search ">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
+      <JFXTextField fx:id="txtSid" labelFloat="true" layoutX="21.0" layoutY="159.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Student ID :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="391.0" layoutY="159.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="Name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPid" labelFloat="true" layoutX="391.0" layoutY="222.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="Program ID :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="21.0" layoutY="101.0" text="Register ID :">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRid" disable="true" layoutX="162.0" layoutY="101.0" prefHeight="34.0" prefWidth="152.0" text="R-0001">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbProgram" layoutX="24.0" layoutY="222.0" prefHeight="31.0" prefWidth="337.0" promptText="Select Program" />
+      <JFXTextField fx:id="txtDuration" labelFloat="true" layoutX="24.0" layoutY="283.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="216.0" promptText="Duration :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="270.0" layoutY="283.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="202.0" promptText="Fee (LKR) :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="btnSave" fx:id="btnRegister" layoutX="524.0" layoutY="279.0" onAction="#btnRegister_OnAction" prefHeight="39.0" prefWidth="187.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Register">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

@@ -2,15 +2,15 @@ package view.tm;
 
 import java.time.LocalDate;
 
-public class RegisterDetailTM {
+public class RegisterTM {
     private String sId;
     private String pId;
     private LocalDate date;
 
-    public RegisterDetailTM() {
+    public RegisterTM() {
     }
 
-    public RegisterDetailTM(String sId, String pId, LocalDate date) {
+    public RegisterTM(String sId, String pId, LocalDate date) {
         this.setsId(sId);
         this.setpId(pId);
         this.setDate(date);

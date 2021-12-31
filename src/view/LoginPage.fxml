@@ -55,7 +55,7 @@
             </Label>
             <Label alignment="CENTER" layoutX="8.0" layoutY="534.0" prefHeight="26.0" prefWidth="463.0" style="-fx-background-color: white;" text="Copyright 2021 Supermarcket," />
             <Label alignment="CENTER" layoutX="9.0" layoutY="554.0" prefHeight="26.0" prefWidth="456.0" style="-fx-background-color: white;" text="All Right Reserved Design By Rasintha Dilshan" />
-            <ImageView fitHeight="170.0" fitWidth="175.0" layoutX="155.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="165.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/user.png" />
                </image>

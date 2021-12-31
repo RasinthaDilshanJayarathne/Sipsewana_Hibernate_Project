@@ -22,8 +22,8 @@ public class DAOFactory {
                 return new StudentDAOImpl();
             case PROGRAM:
                 return new ProgramDAOImpl();
-            case REGISTER_DETAIL:
-                return new RegisterDetailDAOImpl();
+            case REGISTER:
+                return new RegisterDAOImpl();
             case QUERYDAO:
                 return new QueryDAOImpl();
             default:
@@ -32,6 +32,6 @@ public class DAOFactory {
     }
 
     public enum DAOTypes {
-        STUDENT,PROGRAM,REGISTER_DETAIL,QUERYDAO
+        STUDENT,PROGRAM,REGISTER,QUERYDAO
     }
 }

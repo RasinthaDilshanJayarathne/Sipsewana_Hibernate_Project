@@ -35,7 +35,6 @@ public class StudentPageController {
     public JFXButton btnUpdate;
     public JFXButton btnDelete;
     public Label lblSid;
-    public Label lblRid;
     public JFXComboBox cmbProgram;
     public TextField txtSearch;
     public AnchorPane context;

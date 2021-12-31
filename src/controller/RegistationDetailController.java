@@ -1,12 +1,15 @@
 package controller;
 
+import com.jfoenix.controls.JFXTextField;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -23,6 +26,9 @@ public class RegistationDetailController {
     public TableColumn colSname;
     public TableColumn colDate;
     public TextField txtSearch;
+    public JFXTextField txtSid;
+    public JFXTextField txtName;
+    public JFXTextField txtPid;
 
     public void navigateToHome(MouseEvent event) throws IOException {
         URL resource = this.getClass().getResource("/view/HomePage.fxml");
@@ -32,5 +38,11 @@ public class RegistationDetailController {
         primaryStage.setScene(scene);
         primaryStage.centerOnScreen();
         Platform.runLater(() -> primaryStage.sizeToScene());
+    }
+
+    public void textFields_Key_Released(KeyEvent keyEvent) {
+    }
+
+    public void btnRegister_OnAction(ActionEvent actionEvent) {
     }
 }

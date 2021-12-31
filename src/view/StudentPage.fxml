@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Label?>
@@ -19,6 +18,11 @@
 
 <AnchorPane fx:id="context" prefHeight="760.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentPageController">
    <children>
+      <ImageView fitHeight="682.0" fitWidth="692.0" layoutX="51.0" layoutY="64.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/online-course.png" />
+         </image>
+      </ImageView>
       <JFXTextField fx:id="txtName" labelFloat="true" layoutX="26.0" layoutY="167.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Name :">
          <font>
             <Font name="System Bold" size="15.0" />
@@ -52,17 +56,17 @@
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <JFXButton id="btnSave" fx:id="btnSave" layoutX="400.0" layoutY="293.0" onAction="#btnSave_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Save">
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="206.0" layoutY="293.0" onAction="#btnSave_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Save">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton id="btnUpdate" fx:id="btnUpdate" layoutX="520.0" layoutY="293.0" onAction="#btnUpdate_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Update">
+      <JFXButton id="btnUpdate" fx:id="btnUpdate" layoutX="326.0" layoutY="293.0" onAction="#btnUpdate_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Update">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="638.0" layoutY="293.0" onAction="#btnDelete_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Delete">
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="444.0" layoutY="293.0" onAction="#btnDelete_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Delete">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -92,22 +96,11 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="396.0" layoutY="109.0" text="Registation No :">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Label>
       <Label fx:id="lblSid" disable="true" layoutX="151.0" layoutY="109.0" prefHeight="34.0" prefWidth="152.0" text="S-0001">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label fx:id="lblRid" disable="true" layoutX="581.0" layoutY="109.0" prefHeight="34.0" prefWidth="152.0" text="R-0001">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Label>
-      <JFXComboBox fx:id="cmbProgram" layoutX="26.0" layoutY="297.0" prefHeight="31.0" prefWidth="337.0" promptText="Select Your Course" />
       <TextField fx:id="txtSearch" layoutX="14.0" layoutY="374.0" prefHeight="31.0" prefWidth="349.0" promptText="Search Student">
          <font>
             <Font name="System Bold" size="15.0" />

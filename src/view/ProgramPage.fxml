@@ -18,6 +18,11 @@
 
 <AnchorPane fx:id="context" prefHeight="760.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgramPageController">
    <children>
+      <ImageView fitHeight="682.0" fitWidth="692.0" layoutX="44.0" layoutY="72.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/online-course.png" />
+         </image>
+      </ImageView>
       <JFXTextField fx:id="txtPid" labelFloat="true" layoutX="26.0" layoutY="140.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Program ID :">
          <font>
             <Font name="System Bold" size="15.0" />

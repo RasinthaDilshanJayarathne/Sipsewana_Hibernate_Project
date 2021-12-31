@@ -1,8 +1,6 @@
 package entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -14,7 +12,7 @@ public class Student {
     private String address;
     private String contact;
 
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "student",fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
     private List<Register> studentList;
 
     public Student() {

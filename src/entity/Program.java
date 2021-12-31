@@ -1,8 +1,6 @@
 package entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +12,7 @@ public class Program {
     private String duration;
     private double fee;
 
-    @OneToMany(mappedBy = "program")
+    @OneToMany(mappedBy = "program",fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
     private List<Register> courseDetails=new ArrayList<>();
 
     public Program() {

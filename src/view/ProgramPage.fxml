@@ -90,7 +90,7 @@
             <Font name="Garamond Bold" size="35.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearch" layoutX="14.0" layoutY="375.0" prefHeight="31.0" prefWidth="349.0" promptText="Search Program">
+      <TextField fx:id="txtSearch" layoutX="25.0" layoutY="375.0" prefHeight="31.0" prefWidth="708.0" promptText="Search Program">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

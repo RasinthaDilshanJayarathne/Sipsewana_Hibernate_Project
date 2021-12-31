@@ -101,7 +101,7 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearch" layoutX="14.0" layoutY="374.0" prefHeight="31.0" prefWidth="349.0" promptText="Search Student">
+      <TextField fx:id="txtSearch" layoutX="27.0" layoutY="374.0" prefHeight="31.0" prefWidth="709.0" promptText="Search Student">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

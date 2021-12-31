@@ -5,8 +5,15 @@ import bo.impl.BOFactory;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import dao.custom.StudentDAO;
+import dao.impl.StudentDAOImpl;
 import dto.StudentDTO;
+import entity.Student;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -71,6 +78,13 @@ public class StudentPageController {
                 btnSave.setDisable(true);
             }
         });
+
+        /*txtSearch.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                searchStore(newValue);
+            }
+        });*/
     }
 
     private void loadAllStudents() {
@@ -226,5 +240,22 @@ public class StudentPageController {
         txtNic.clear();
         txtAddress.clear();
         txtContact.clear();
+    }
+
+    public void searchStore(String value) {
+       /* ObservableList<StudentTM> obList = FXCollections.observableArrayList();
+        try {
+            List<Student> storeDetails = Collections.singletonList(StudentDAOImpl.searchStudent(value));
+
+            storeDetails.forEach(e->{
+                obList.add(
+                        new StudentTM(e.getsId(),e.getsName(),e.getNic(),e.getAddress(),e.getContact()));
+            });
+            tblStudent.setItems(obList);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }*/
     }
 }

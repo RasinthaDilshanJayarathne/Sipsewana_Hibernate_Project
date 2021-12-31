@@ -59,8 +59,6 @@ public class ProgramPageController {
 
     private final ProgramBO programBO = (ProgramBO) BOFactory.getBOFactory().getBO(BOFactory.BoTypes.PROGRAM);
 
-
-
     public void initialize(){
 
         txtPid.setText(generateNewId());

@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 @Entity
 @Cacheable
-@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Register {
     @Id
     private String RegId;

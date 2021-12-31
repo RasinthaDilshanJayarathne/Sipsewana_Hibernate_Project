@@ -103,12 +103,12 @@ public class RegistationDetailController {
                 getCourseDetails(newValue);
             }
         });
-        /*txtSearch.textProperty().addListener(new ChangeListener<String>() {
+        txtSearch.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                searchRegister(newValue);
+                searchStore(newValue);
             }
-        });*/
+        });
     }
 
     private void loadAllDetails() {
@@ -242,20 +242,16 @@ public class RegistationDetailController {
             btnRegister.setDisable(false);
         }
     }
-    /*private void searchRegister(String newValue) {
-        ObservableList<RegisterDetailTM> obList = FXCollections.observableArrayList();
-        try {
-            List<Register> students = RegisterDAOImpl.search(newValue);
+    public void searchStore(String value) {
 
-            students.forEach(e->{
-                obList.add(
-                        new RegisterDetailTM(e.getRegId(),e.getRegDate()));
-            });
-            tblDetails.setItems(obList);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        ObservableList<RegisterDetailTM> obList = FXCollections.observableArrayList();
+
+        List<CustomDTO> detail = registerBO.searchDetail(value);
+
+        for (CustomDTO temp:detail) {
+            obList.add(new RegisterDetailTM(temp.getRegId(),temp.getSId(),temp.getSName(),temp.getCId(),temp.getCName(),temp.getRegDate()));
         }
-    }*/
+
+        tblDetails.setItems(obList);
+    }
 }

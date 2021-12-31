@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Cacheable
-@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Program {
     @Id
     private String pId;

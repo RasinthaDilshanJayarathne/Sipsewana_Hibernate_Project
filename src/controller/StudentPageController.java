@@ -157,9 +157,9 @@ public class StudentPageController {
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved...!").show();
 
                 clear();
-                StudentDTO studentDTO = new StudentDTO(id, name, address, contact, nic);
+                StudentDTO studentDTO = new StudentDTO(id, name, nic,address, contact );
                 studentBO.addStudent(studentDTO);
-                tblStudent.getItems().add(new StudentTM(id, name, address ,contact,nic));
+                tblStudent.getItems().add(new StudentTM(id, name, nic,address ,contact));
                 lblSid.setText(generateNewId());
 
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/RegistationDetail.fxml"));

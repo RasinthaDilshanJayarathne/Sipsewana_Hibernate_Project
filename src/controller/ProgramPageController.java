@@ -94,7 +94,7 @@ public class ProgramPageController {
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap();
     Pattern namePattern = Pattern.compile("^[A-z ]{1,}$");
     Pattern durationPattern = Pattern.compile("^[A-z0-9- ]{3,20}$");
-    Pattern feePattern = Pattern.compile("^[0-9]{3,5}$");
+    Pattern feePattern = Pattern.compile("^([1-9][0-9]*)[.]?[0-9]{1}$");
 
     private void storeValidations() {
         map.put(textName, namePattern);

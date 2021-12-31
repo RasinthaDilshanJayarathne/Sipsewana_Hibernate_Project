@@ -17,6 +17,7 @@ import util.validation.FactoryConfigeration;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class RegisterBOImpl implements RegisterBO {
 
@@ -60,5 +61,10 @@ public class RegisterBOImpl implements RegisterBO {
     @Override
     public String generateNewID() throws SQLException, ClassNotFoundException {
         return registerDAO.generateNewID();
+    }
+
+    @Override
+    public List<CustomDTO> searchDetail(String value) {
+        return queryDAO.searchDetail(value);
     }
 }

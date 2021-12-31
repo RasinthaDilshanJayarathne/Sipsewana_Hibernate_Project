@@ -2,6 +2,9 @@ package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Program {
@@ -11,6 +14,9 @@ public class Program {
     private String duration;
     private double fee;
 
+    @OneToMany(mappedBy = "course")
+    private List<Register> courseDetails=new ArrayList<>();
+
     public Program() {
     }
 
@@ -19,6 +25,14 @@ public class Program {
         this.setpName(pName);
         this.setDuration(duration);
         this.setFee(fee);
+    }
+
+    public Program(String pId, String pName, String duration, double fee, List<Register> courseDetails) {
+        this.setpId(pId);
+        this.setpName(pName);
+        this.setDuration(duration);
+        this.setFee(fee);
+        this.setCourseDetails(courseDetails);
     }
 
     public String getpId() {
@@ -53,6 +67,14 @@ public class Program {
         this.fee = fee;
     }
 
+    public List<Register> getCourseDetails() {
+        return courseDetails;
+    }
+
+    public void setCourseDetails(List<Register> courseDetails) {
+        this.courseDetails = courseDetails;
+    }
+
     @Override
     public String toString() {
         return "Program{" +
@@ -60,6 +82,7 @@ public class Program {
                 ", pName='" + pName + '\'' +
                 ", duration='" + duration + '\'' +
                 ", fee=" + fee +
+                ", courseDetails=" + courseDetails +
                 '}';
     }
 }

@@ -1,42 +1,69 @@
 package entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
+@Entity
 public class Register {
-    private String sId;
-    private String pId;
-    private LocalDate date;
+    @Id
+    private String RegId;
+    private LocalDate RegDate;
+    @ManyToOne
+    private Student student;
+    @ManyToOne
+    private Program program;
 
     public Register() {
     }
 
-    public Register(String sId, String pId, LocalDate date) {
-        this.setsId(sId);
-        this.setpId(pId);
-        this.setDate(date);
+    public Register(String regId, LocalDate regDate, Student student, Program program) {
+        setRegId(regId);
+        setRegDate(regDate);
+        this.setStudent(student);
+        this.setProgram(program);
     }
 
-    public String getsId() {
-        return sId;
+    public String getRegId() {
+        return RegId;
     }
 
-    public void setsId(String sId) {
-        this.sId = sId;
+    public void setRegId(String regId) {
+        RegId = regId;
     }
 
-    public String getpId() {
-        return pId;
+    public LocalDate getRegDate() {
+        return RegDate;
     }
 
-    public void setpId(String pId) {
-        this.pId = pId;
+    public void setRegDate(LocalDate regDate) {
+        RegDate = regDate;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public Program getProgram() {
+        return program;
+    }
+
+    public void setProgram(Program program) {
+        this.program = program;
+    }
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "RegId='" + RegId + '\'' +
+                ", RegDate=" + RegDate +
+                ", student=" + student +
+                ", program=" + program +
+                '}';
     }
 }

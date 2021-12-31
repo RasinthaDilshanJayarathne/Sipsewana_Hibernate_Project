@@ -2,6 +2,8 @@ package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Student {
@@ -13,6 +15,9 @@ public class Student {
     private String contact;
     private String program;
 
+    @OneToMany(mappedBy = "student")
+    private List<Register> studentList;
+
     public Student() {
     }
 
@@ -23,6 +28,16 @@ public class Student {
         this.setAddress(address);
         this.setContact(contact);
         this.setProgram(program);
+    }
+
+    public Student(String sId, String sName, String nic, String address, String contact, String program, List<Register> studentList) {
+        this.setsId(sId);
+        this.setsName(sName);
+        this.setNic(nic);
+        this.setAddress(address);
+        this.setContact(contact);
+        this.setProgram(program);
+        this.setStudentList(studentList);
     }
 
     public String getsId() {
@@ -73,6 +88,14 @@ public class Student {
         this.program = program;
     }
 
+    public List<Register> getStudentList() {
+        return studentList;
+    }
+
+    public void setStudentList(List<Register> studentList) {
+        this.studentList = studentList;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -82,6 +105,7 @@ public class Student {
                 ", address='" + address + '\'' +
                 ", contact='" + contact + '\'' +
                 ", program='" + program + '\'' +
+                ", studentList=" + studentList +
                 '}';
     }
 }

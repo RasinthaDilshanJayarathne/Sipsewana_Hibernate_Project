@@ -8,18 +8,16 @@ public class StudentDTO implements Serializable {
     private String nic;
     private String address;
     private String contact;
-    private String program;
 
     public StudentDTO() {
     }
 
-    public StudentDTO(String sId, String sName, String nic, String address, String contact, String program) {
+    public StudentDTO(String sId, String sName, String nic, String address, String contact) {
         this.setsId(sId);
         this.setsName(sName);
         this.setNic(nic);
         this.setAddress(address);
         this.setContact(contact);
-        this.setProgram(program);
     }
 
     public String getsId() {
@@ -62,13 +60,6 @@ public class StudentDTO implements Serializable {
         this.contact = contact;
     }
 
-    public String getProgram() {
-        return program;
-    }
-
-    public void setProgram(String program) {
-        this.program = program;
-    }
 
     @Override
     public String toString() {
@@ -78,7 +69,6 @@ public class StudentDTO implements Serializable {
                 ", nic='" + nic + '\'' +
                 ", address='" + address + '\'' +
                 ", contact='" + contact + '\'' +
-                ", program='" + program + '\'' +
                 '}';
     }
 }

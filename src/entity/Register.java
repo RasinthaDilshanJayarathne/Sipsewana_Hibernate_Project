@@ -19,8 +19,8 @@ public class Register {
     }
 
     public Register(String regId, LocalDate regDate, Student student, Program program) {
-        setRegId(regId);
-        setRegDate(regDate);
+        this.setRegId(regId);
+        this.setRegDate(regDate);
         this.setStudent(student);
         this.setProgram(program);
     }

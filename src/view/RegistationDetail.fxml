@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
@@ -71,7 +72,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtPid" labelFloat="true" layoutX="391.0" layoutY="222.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="Program ID :">
+      <JFXTextField fx:id="txtPid" labelFloat="true" layoutX="391.0" layoutY="219.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="349.0" promptText="Program ID :">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -86,21 +87,26 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="cmbProgram" layoutX="24.0" layoutY="222.0" prefHeight="31.0" prefWidth="337.0" promptText="Select Program" />
-      <JFXTextField fx:id="txtDuration" labelFloat="true" layoutX="24.0" layoutY="283.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="216.0" promptText="Duration :">
+      <JFXComboBox fx:id="cmbProgram" layoutX="24.0" layoutY="219.0" prefHeight="31.0" prefWidth="337.0" promptText="Select Program" />
+      <JFXTextField fx:id="txtDuration" labelFloat="true" layoutX="24.0" layoutY="283.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="160.0" promptText="Duration :">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="270.0" layoutY="283.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="202.0" promptText="Fee (LKR) :">
+      <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="216.0" layoutY="283.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="160.0" promptText="Fee (LKR) :">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton id="btnSave" fx:id="btnRegister" layoutX="524.0" layoutY="279.0" onAction="#btnRegister_OnAction" prefHeight="39.0" prefWidth="187.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Register">
+      <JFXButton id="btnSave" fx:id="btnRegister" layoutX="573.0" layoutY="279.0" onAction="#btnRegister_OnAction" prefHeight="39.0" prefWidth="167.0" style="-fx-cursor: hand;" stylesheets="@../styles/style.css" text="Register">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <JFXCheckBox fx:id="checkBox" layoutX="409.0" layoutY="277.0" onAction="#paid_On_Action" prefHeight="40.0" prefWidth="117.0" text="Paid">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXCheckBox>
    </children>
 </AnchorPane>

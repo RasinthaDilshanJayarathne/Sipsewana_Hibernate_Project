@@ -13,7 +13,6 @@ public class Student {
     private String nic;
     private String address;
     private String contact;
-    private String program;
 
     @OneToMany(mappedBy = "student")
     private List<Register> studentList;
@@ -21,22 +20,20 @@ public class Student {
     public Student() {
     }
 
-    public Student(String sId, String sName, String nic, String address, String contact, String program) {
+    public Student(String sId, String sName, String nic, String address, String contact) {
         this.setsId(sId);
         this.setsName(sName);
         this.setNic(nic);
         this.setAddress(address);
         this.setContact(contact);
-        this.setProgram(program);
     }
 
-    public Student(String sId, String sName, String nic, String address, String contact, String program, List<Register> studentList) {
+    public Student(String sId, String sName, String nic, String address, String contact, List<Register> studentList) {
         this.setsId(sId);
         this.setsName(sName);
         this.setNic(nic);
         this.setAddress(address);
         this.setContact(contact);
-        this.setProgram(program);
         this.setStudentList(studentList);
     }
 
@@ -80,14 +77,6 @@ public class Student {
         this.contact = contact;
     }
 
-    public String getProgram() {
-        return program;
-    }
-
-    public void setProgram(String program) {
-        this.program = program;
-    }
-
     public List<Register> getStudentList() {
         return studentList;
     }
@@ -104,7 +93,6 @@ public class Student {
                 ", nic='" + nic + '\'' +
                 ", address='" + address + '\'' +
                 ", contact='" + contact + '\'' +
-                ", program='" + program + '\'' +
                 ", studentList=" + studentList +
                 '}';
     }

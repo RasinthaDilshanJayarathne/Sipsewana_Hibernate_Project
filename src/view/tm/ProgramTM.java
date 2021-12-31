@@ -1,35 +1,35 @@
 package view.tm;
 
 public class ProgramTM implements Comparable<ProgramTM>{
-    private String pId;
-    private String pName;
+    private String programId;
+    private String programName;
     private String duration;
     private double fee;
 
     public ProgramTM() {
     }
 
-    public ProgramTM(String pId, String pName, String duration, double fee) {
-        this.setpId(pId);
-        this.setpName(pName);
+    public ProgramTM(String programId, String programName, String duration, double fee) {
+        this.setProgramIg(programId);
+        this.setProgramName(programName);
         this.setDuration(duration);
         this.setFee(fee);
     }
 
-    public String getpId() {
-        return pId;
+    public String getProgramId() {
+        return programId;
     }
 
-    public void setpId(String pId) {
-        this.pId = pId;
+    public void setProgramIg(String programId) {
+        this.programId = programId;
     }
 
-    public String getpName() {
-        return pName;
+    public String getProgramName() {
+        return programName;
     }
 
-    public void setpName(String pName) {
-        this.pName = pName;
+    public void setProgramName(String programName) {
+        this.programName = programName;
     }
 
     public String getDuration() {
@@ -50,16 +50,15 @@ public class ProgramTM implements Comparable<ProgramTM>{
 
     @Override
     public String toString() {
-        return "Program{" +
-                "pId='" + pId + '\'' +
-                ", pName='" + pName + '\'' +
+        return "ProgramTM{" +
+                "programId='" + programId + '\'' +
+                ", programName='" + programName + '\'' +
                 ", duration='" + duration + '\'' +
                 ", fee=" + fee +
                 '}';
     }
-
     @Override
     public int compareTo(ProgramTM o) {
-        return pId.compareTo(o.getpId());
+        return programId.compareTo(o.getProgramId());
     }
 }

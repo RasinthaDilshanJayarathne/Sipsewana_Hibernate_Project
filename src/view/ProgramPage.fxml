@@ -23,7 +23,7 @@
             <Image url="@../assets/online-course.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtPid" labelFloat="true" layoutX="26.0" layoutY="140.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Program ID :">
+      <JFXTextField fx:id="txtPid" editable="false" labelFloat="true" layoutX="26.0" layoutY="140.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Program ID :">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -43,10 +43,10 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <TableView fx:id="tblStudent" layoutX="12.0" layoutY="413.0" prefHeight="334.0" prefWidth="737.0" stylesheets="@../styles/style.css">
+      <TableView fx:id="tblProgram" layoutX="12.0" layoutY="413.0" prefHeight="334.0" prefWidth="737.0" stylesheets="@../styles/style.css">
          <columns>
             <TableColumn fx:id="colPid" prefWidth="158.0" text="Program ID" />
-            <TableColumn fx:id="colProgram" prefWidth="197.0" text="Program" />
+            <TableColumn fx:id="colPname" prefWidth="197.0" text="Program" />
             <TableColumn fx:id="colDuration" prefWidth="192.0" text="Duration" />
             <TableColumn fx:id="colFee" prefWidth="184.0" text="Fee (LKR)" />
          </columns>

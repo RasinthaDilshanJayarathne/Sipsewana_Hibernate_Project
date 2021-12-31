@@ -14,7 +14,7 @@ public class Program {
     private String duration;
     private double fee;
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "program")
     private List<Register> courseDetails=new ArrayList<>();
 
     public Program() {

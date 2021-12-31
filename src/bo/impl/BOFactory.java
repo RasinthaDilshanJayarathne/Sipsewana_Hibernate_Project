@@ -20,7 +20,7 @@ public class BOFactory {
             case STUDENT:
                 return new StudentBOImpl();
             case PROGRAM:
-                return new StudentBOImpl();
+                return new ProgramBOImpl();
             case REGISTER:
                 return new RegisterBOImpl();
             default:

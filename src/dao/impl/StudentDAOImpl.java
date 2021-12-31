@@ -25,7 +25,8 @@ public class StudentDAOImpl implements StudentDAO {
     public boolean delete(String s) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(s);
+        Student course = session.get(Student.class, s);
+        session.delete(course);
         transaction.commit();
         session.close();
         return true;
@@ -90,5 +91,18 @@ public class StudentDAOImpl implements StudentDAO {
             return String.format("S%03d", newStudentId);
         }
         return "S001";
+    }
+
+    public String getStudentName(String id) throws SQLException, ClassNotFoundException {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("SELECT sName FROM Student WHERE sId=:id");
+        String id1 = (String) query.setParameter("id", id).uniqueResult();
+        if (id1!=null){
+            return id1;
+        }
+        transaction.commit();
+        session.close();
+        return null;
     }
 }

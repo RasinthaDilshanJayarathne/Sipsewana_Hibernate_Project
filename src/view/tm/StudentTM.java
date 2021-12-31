@@ -1,41 +1,37 @@
 package view.tm;
 
-import entity.Student;
-
 public class StudentTM implements Comparable<StudentTM>{
-    private String sId;
-    private String sName;
+    private String studentId;
+    private String studentName;
     private String nic;
     private String address;
     private String contact;
-    private String program;
 
     public StudentTM() {
     }
 
-    public StudentTM(String sId, String sName, String nic, String address, String contact, String program) {
-        this.setsId(sId);
-        this.setsName(sName);
+    public StudentTM(String studentId, String studentName, String nic, String address, String contact) {
+        this.setStudentId(studentId);
+        this.setStudentName(studentName);
         this.setNic(nic);
         this.setAddress(address);
         this.setContact(contact);
-        this.setProgram(program);
     }
 
-    public String getsId() {
-        return sId;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setsId(String sId) {
-        this.sId = sId;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
-    public String getsName() {
-        return sName;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setsName(String sName) {
-        this.sName = sName;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getNic() {
@@ -62,28 +58,18 @@ public class StudentTM implements Comparable<StudentTM>{
         this.contact = contact;
     }
 
-    public String getProgram() {
-        return program;
-    }
-
-    public void setProgram(String program) {
-        this.program = program;
-    }
-
     @Override
     public String toString() {
-        return "Student{" +
-                "sId='" + sId + '\'' +
-                ", sName='" + sName + '\'' +
+        return "StudentTM{" +
+                "studentId='" + studentId + '\'' +
+                ", studentName='" + studentName + '\'' +
                 ", nic='" + nic + '\'' +
                 ", address='" + address + '\'' +
                 ", contact='" + contact + '\'' +
-                ", program='" + program + '\'' +
                 '}';
     }
-
     @Override
     public int compareTo(StudentTM o) {
-        return sId.compareTo(o.getsId());
+        return studentId.compareTo(o.getStudentId());
     }
 }

@@ -1,6 +1,8 @@
 package dto;
 
-public class ProgramDTO {
+import java.io.Serializable;
+
+public class ProgramDTO implements Serializable {
     private String pId;
     private String pName;
     private String duration;

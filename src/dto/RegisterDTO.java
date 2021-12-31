@@ -1,8 +1,9 @@
 package dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class RegisterDTO {
+public class RegisterDTO implements Serializable {
     private String RegId;
     private String SId;
     private String CId;

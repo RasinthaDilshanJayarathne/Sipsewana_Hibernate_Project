@@ -75,7 +75,7 @@ public class HomePageController {
 
             switch (icon.getId()) {
                 case "imgStudent":
-                    lblMenu.setText("Register Student");
+                    lblMenu.setText("Manage Student");
                     lblDescription.setText("Click search or view all reports");
                     break;
                 case "imgProgram":
@@ -83,8 +83,8 @@ public class HomePageController {
                     lblDescription.setText("Click to search or view all options");
                     break;
                 case "imgDetail":
-                    lblMenu.setText("View Register Detail");
-                    lblDescription.setText("Click to add, edit, delete, search or view items");
+                    lblMenu.setText("Student Register Form");
+                    lblDescription.setText("Click to register student");
                     break;
             }
 

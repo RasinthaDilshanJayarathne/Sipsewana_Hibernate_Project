@@ -2,6 +2,7 @@ package dao.impl;
 
 import dao.custom.ProgramDAO;
 import entity.Program;
+import entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -113,5 +114,14 @@ public class ProgramDAOImpl implements ProgramDAO {
         transaction.commit();
         session.close();
         return course;
+    }
+
+    public static List<Program> searchProhram(String s) {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List<Program> programs = session.createQuery("FROM Program WHERE pId LIKE '%" + s + "%' or pName LIKE '%" + s + "%'").list();
+        transaction.commit();
+        session.close();
+        return programs;
     }
 }

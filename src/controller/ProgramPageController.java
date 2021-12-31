@@ -4,8 +4,16 @@ import bo.custom.ProgramBO;
 import bo.impl.BOFactory;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import dao.impl.ProgramDAOImpl;
+import dao.impl.StudentDAOImpl;
 import dto.ProgramDTO;
+import entity.Program;
+import entity.Student;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,18 +23,23 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import util.validation.ValidationUtil;
 import view.tm.ProgramTM;
+import view.tm.StudentTM;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class ProgramPageController {
     public AnchorPane context;
@@ -60,6 +73,7 @@ public class ProgramPageController {
 
         loadAllCourses();
         //btnSave.setDisable(true);
+        storeValidations();
 
         tblProgram.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -71,6 +85,37 @@ public class ProgramPageController {
                 btnSave.setDisable(true);
             }
         });
+
+        txtSearch.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                searchProgram(newValue);
+            }
+        });
+    }
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap();
+    Pattern namePattern = Pattern.compile("^[A-z ]{1,}$");
+    Pattern durationPattern = Pattern.compile("^[A-z0-9- ]{3,20}$");
+    Pattern feePattern = Pattern.compile("^[0-9]{3,5}$");
+
+    private void storeValidations() {
+        map.put(textName, namePattern);
+        map.put(txtDuration, durationPattern);
+        map.put(txtFee, feePattern);
+
+    }
+
+    public void textFields_Key_Released(KeyEvent keyEvent) {
+        Object response = ValidationUtil.validate(map,btnSave);
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            if (response instanceof TextField) {
+                TextField errorText = (TextField) response;
+                errorText.requestFocus();
+            } else if (response instanceof Boolean) {
+                //new Alert(Alert.AlertType.INFORMATION, "Aded").showAndWait();
+            }
+        }
     }
 
     private String generateNewId() {
@@ -201,9 +246,6 @@ public class ProgramPageController {
         }
     }
 
-    public void textFields_Key_Released(KeyEvent keyEvent) {
-
-    }
     boolean exitsCourse(String id) throws SQLException, ClassNotFoundException {
         return programBO.ifProgramExist(id);
     }
@@ -212,5 +254,18 @@ public class ProgramPageController {
         textName.clear();
         txtFee.clear();
         txtDuration.clear();
+    }
+
+    private void searchProgram(String newValue) {
+        ObservableList<ProgramTM> obList = FXCollections.observableArrayList();
+        /* List<Student> students = Collections.singletonList(StudentDAOImpl.searchStudent(value));*/
+
+        List<Program> programs = ProgramDAOImpl.searchProhram(newValue);
+
+        programs.forEach(e->{
+            obList.add(
+                    new ProgramTM(e.getpId(),e.getpName(),e.getDuration(),e.getFee()));
+        });
+        tblProgram.setItems(obList);
     }
 }

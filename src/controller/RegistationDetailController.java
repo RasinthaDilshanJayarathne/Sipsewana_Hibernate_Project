@@ -7,14 +7,19 @@ import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import dao.impl.ProgramDAOImpl;
+import dao.impl.RegisterDAOImpl;
 import dao.impl.StudentDAOImpl;
 import dto.CustomDTO;
 import dto.RegisterDTO;
 import dto.StudentDTO;
 import entity.Program;
+import entity.Register;
+import entity.Student;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,6 +31,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import view.tm.RegisterDetailTM;
+import view.tm.StudentTM;
 
 import java.io.IOException;
 import java.net.URL;
@@ -97,6 +103,12 @@ public class RegistationDetailController {
                 getCourseDetails(newValue);
             }
         });
+        /*txtSearch.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                searchRegister(newValue);
+            }
+        });*/
     }
 
     private void loadAllDetails() {
@@ -230,4 +242,20 @@ public class RegistationDetailController {
             btnRegister.setDisable(false);
         }
     }
+    /*private void searchRegister(String newValue) {
+        ObservableList<RegisterDetailTM> obList = FXCollections.observableArrayList();
+        try {
+            List<Register> students = RegisterDAOImpl.search(newValue);
+
+            students.forEach(e->{
+                obList.add(
+                        new RegisterDetailTM(e.getRegId(),e.getRegDate()));
+            });
+            tblDetails.setItems(obList);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }*/
 }

@@ -1,14 +1,19 @@
 package dao.impl;
 
 import dao.custom.StudentDAO;
+import db.DbConnection;
 import entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import util.validation.FactoryConfigeration;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
     @Override
@@ -105,4 +110,13 @@ public class StudentDAOImpl implements StudentDAO {
         session.close();
         return null;
     }
+    public static List<Student> searchStudent(String s) throws SQLException, ClassNotFoundException {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List<Student> student = session.createQuery("FROM Student WHERE sId LIKE '%" + s + "%' or sName LIKE '%" + s + "%'").list();
+        transaction.commit();
+        session.close();
+        return student;
+    }
+
 }

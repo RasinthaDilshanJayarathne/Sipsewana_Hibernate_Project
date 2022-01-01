@@ -31,8 +31,14 @@
          <children>
             <FontAwesomeIconView glyphName="USER" layoutX="17.0" layoutY="301.0" size="40" />
             <FontAwesomeIconView glyphName="KEY" layoutX="17.0" layoutY="382.0" size="40" />
-            <TextField fx:id="txtUserName" layoutX="113.0" layoutY="267.0" onAction="#goToPassword" prefHeight="40.0" prefWidth="321.0" promptText="User Name" />
-            <PasswordField fx:id="txtPassword" layoutX="113.0" layoutY="346.0" prefHeight="40.0" prefWidth="321.0" promptText="Password" />
+            <TextField fx:id="txtUserName" layoutX="113.0" layoutY="267.0" onAction="#goToPassword" prefHeight="40.0" prefWidth="321.0" promptText="User Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <PasswordField fx:id="txtPassword" layoutX="113.0" layoutY="346.0" prefHeight="40.0" prefWidth="321.0" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></PasswordField>
             <Button layoutX="281.0" layoutY="460.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: blue;" text="Log In" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />

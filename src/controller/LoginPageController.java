@@ -20,10 +20,15 @@ public class LoginPageController {
     public Label lblError;
 
     public void goToLoginPage(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/HomePage.fxml");
-        Parent load = FXMLLoader.load(resource);
-        Stage window = (Stage) root.getScene().getWindow();
-        window.setScene(new Scene(load));
+        if(txtPassword.getText().equals("1234") & txtUserName.getText().equalsIgnoreCase("admin")){
+            URL resource = getClass().getResource("../view/HomePage.fxml");
+            Parent load = FXMLLoader.load(resource);
+            Stage window = (Stage) root.getScene().getWindow();
+            window.setScene(new Scene(load));
+        }
+        else{
+            lblError.setText("Enter correct username or password");
+        }
     }
 
     public void goToPassword(ActionEvent actionEvent) {

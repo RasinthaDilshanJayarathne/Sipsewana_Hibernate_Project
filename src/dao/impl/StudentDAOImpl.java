@@ -1,21 +1,26 @@
 package dao.impl;
 
 import dao.custom.StudentDAO;
-import db.DbConnection;
 import entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import util.validation.FactoryConfigeration;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
+    public static List<Student> searchStudent(String s) throws SQLException, ClassNotFoundException {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List<Student> student = session.createQuery("FROM Student WHERE sId LIKE '%" + s + "%' or sName LIKE '%" + s + "%'").list();
+        transaction.commit();
+        session.close();
+        return student;
+    }
+
     @Override
     public boolean add(Student student) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfigeration.getInstance().getSession();
@@ -75,7 +80,7 @@ public class StudentDAOImpl implements StudentDAO {
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("SELECT sId FROM Student WHERE sId=:id");
         String id1 = (String) query.setParameter("id", id).uniqueResult();
-        if (id1!=null){
+        if (id1 != null) {
             return true;
         }
         transaction.commit();
@@ -91,32 +96,25 @@ public class StudentDAOImpl implements StudentDAO {
         String s = (String) query.uniqueResult();
         transaction.commit();
         session.close();
-        if (s!=null) {
+        if (s != null) {
             int newStudentId = Integer.parseInt(s.replace("S", "")) + 1;
             return String.format("S%03d", newStudentId);
         }
         return "S001";
     }
 
+    @Override
     public String getStudentName(String id) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("SELECT sName FROM Student WHERE sId=:id");
         String id1 = (String) query.setParameter("id", id).uniqueResult();
-        if (id1!=null){
+        if (id1 != null) {
             return id1;
         }
         transaction.commit();
         session.close();
         return null;
-    }
-    public static List<Student> searchStudent(String s) throws SQLException, ClassNotFoundException {
-        Session session = FactoryConfigeration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-        List<Student> student = session.createQuery("FROM Student WHERE sId LIKE '%" + s + "%' or sName LIKE '%" + s + "%'").list();
-        transaction.commit();
-        session.close();
-        return student;
     }
 
 }

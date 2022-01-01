@@ -95,6 +95,7 @@ public class ProgramDAOImpl implements ProgramDAO {
         return "C001";
     }
 
+    @Override
     public List<String> getCourses() throws SQLException, ClassNotFoundException {
         ArrayList<String> allCourses = new ArrayList();
         Session session = FactoryConfigeration.getInstance().getSession();
@@ -106,6 +107,7 @@ public class ProgramDAOImpl implements ProgramDAO {
         return allCourses;
     }
 
+    @Override
     public Program getCourseDetails(String pName) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

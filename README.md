@@ -13,3 +13,11 @@ Dashboard Page 🖥
 Student Manage Page 👩🏼‍🤝‍👩🏻
 
 ![Screenshot (704)](https://user-images.githubusercontent.com/87766409/147842385-44e536c3-5972-4723-bbff-ec70181f84d6.png)
+
+Courses Manage Page ✍
+
+![Screenshot (705)](https://user-images.githubusercontent.com/87766409/147842402-57394214-d496-4a94-815b-f837fc591bc2.png)
+
+Student Register Form 🎫
+
+![Screenshot (706)](https://user-images.githubusercontent.com/87766409/147842404-cb3de0fb-3b02-48a6-9154-7e71a4b673da.png)
